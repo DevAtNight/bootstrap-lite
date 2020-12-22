@@ -10,7 +10,9 @@
     "postbuild": "mv dist/bootstrap-lite.css dist/bootstrap-lite.min.css"
   },
   "husky": {
-    "pre-push": "npm run build"
+    "hooks": {
+      "pre-push": "npm run build"
+    }
   },
   "devDependencies": {
     "husky": "^4.3.6",

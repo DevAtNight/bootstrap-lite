@@ -1109,7 +1109,10 @@
   background-color: #212529 !important;
 }
 
-.bg-body,
+.bg-body {
+  background-color: #fff !important;
+}
+
 .bg-white {
   background-color: #fff !important;
 }
@@ -4651,7 +4654,7 @@ $vertical-aligns: baseline, sub, super, text-top, text-bottom, middle, top,
   bottom, inherit, initial, unset;
 
 @each $align in $vertical-aligns {
-  .vertical-align-#{$align} {
+  .vertical-#{$align} {
     vertical-align: $align !important;
   }
 }

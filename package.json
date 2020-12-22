@@ -9,7 +9,11 @@
     "build": "sass src:dist --no-source-map --style compressed",
     "postbuild": "mv dist/bootstrap-lite.css dist/bootstrap-lite.min.css"
   },
+  "husky": {
+    "pre-push": "npm run build"
+  },
   "devDependencies": {
+    "husky": "^4.3.6",
     "prettier": "^2.2.1",
     "sass": "^1.29.0"
   }

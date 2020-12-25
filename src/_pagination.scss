@@ -1,0 +1,51 @@
+@import 'vars';
+
+.pagination {
+  display: inline-flex;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  background-color: white;
+
+  .page-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $primary;
+    cursor: pointer;
+
+    a[role='button'] {
+      padding: 2px 8px;
+      text-decoration: none;
+      outline: none;
+    }
+
+    &:last-of-type {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      border-right: none;
+    }
+
+    &:hover {
+      background-color: $gray-100;
+    }
+
+    &.active {
+      background-color: $gray-200;
+
+      a[role='button'] {
+        color: white;
+      }
+    }
+
+    &.disable {
+      background-color: unset;
+      cursor: not-allowed;
+
+      a[role='button'] {
+        color: $gray-200;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

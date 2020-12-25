@@ -1,0 +1,25 @@
+@import 'vars';
+
+$base-color: map-merge(
+  $map1: $colors,
+  $map2: $theme-colors,
+);
+
+:root {
+  @each $key, $value in $base-color {
+    --#{$key}: #{$value};
+  }
+
+  @each $key, $value in $grays {
+    --gray-#{$key}: #{$value};
+  }
+
+  --breakpoint-xs: #{$screen-xs};
+  --breakpoint-sm: #{$screen-sm};
+  --breakpoint-md: #{$screen-md};
+  --breakpoint-lg: #{$screen-lg};
+  --breakpoint-xl: #{$screen-xl};
+
+  --font-family-sans-serif: #{$font-family-sans-serif};
+  --font-family-monospace: #{$font-family-monospace};
+}
